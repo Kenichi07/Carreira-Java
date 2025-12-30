@@ -16,17 +16,17 @@ Tipos primitivos são os blocos de construção fundamentais de dados em Java, d
 # 🧮 Operadores em Java
 Java possui diversos operadores utilizados para realizar cálculos, comparações e manipulação de variáveis.
 
-1. Operadores Aritméticos  
+1 - Operadores Aritméticos  
    Usados para realizar operações matemáticas.
 
     Operador | Nome | Exemplo
-    1. + | Adição | a + b
+    1. + | Adição | a + b 
     2. - | Subtração | a - b
     3. * | Multiplicação | a * b
     4. / | Divisão | a / b
     5. % | Módulo (Resto da divisão) | a % b
 
-2. Operadores de Atribuição  
+2 - Operadores de Atribuição  
    Usados para atribuir valores a variáveis. O mais comum é o =, mas existem operadores compostos para simplificar a escrita.
 
     Operador | Exemplo | Equivalente a
@@ -36,15 +36,14 @@ Java possui diversos operadores utilizados para realizar cálculos, comparaçõe
     4. *= | x *= 4; | x = x * 4;
     5. /= | x /= 2; | x = x / 2;
 
-3. Operadores de Incremento e Decremento  
+3 - Operadores de Incremento e Decremento  
    Usados para aumentar (++) ou diminuir (--) o valor de uma variável em 1.
 
-    Pós-incremento/decremento (i++, i--): O valor é usado primeiro na expressão e depois incrementado/decrementado.
+     Pós-incremento/decremento (i++, i--): O valor é usado primeiro na expressão e depois incrementado/decrementado.  
+     Pré-incremento/decremento (++i, --i): O valor é incrementado/decrementado primeiro e depois usado na expressão.
 
-    Pré-incremento/decremento (++i, --i): O valor é incrementado/decrementado primeiro e depois usado na expressão.
-
-4. Operadores Relacionais  
-   Usados para comparar dois valores, retornando um resultado booleano (true ou false).
+4 - Operadores Relacionais  
+  Usados para comparar dois valores, retornando um resultado booleano (true ou false).
 
     Operador | Descrição
     == | Igual a
@@ -52,9 +51,9 @@ Java possui diversos operadores utilizados para realizar cálculos, comparaçõe
     > | Maior que
     < | Menor que
     >= | Maior ou igual a
-    <= | Menor ou igual a
+    <= | Menor ou igual a   
 
-5. Operadores Lógicos  
+5 - Operadores Lógicos  
    Usados para combinar expressões booleanas ou inverter um resultado booleano.
 
     Operador | Descrição | Exemplo
@@ -65,7 +64,7 @@ Java possui diversos operadores utilizados para realizar cálculos, comparaçõe
 # 📝 Convenções de Código Java (Padrão Oracle)
 A padronização do código é essencial para a leitura e manutenção do projeto. Adotamos as seguintes convenções de nomenclatura:
 
-1. Nomenclatura (Case Styles)
+1 - Nomenclatura (Case Styles)
 
     Elemento | Convenção | Exemplo
     1. Classes | "PascalCase (Começa com Maiúscula, cada nova palavra Maiúscula)." | "UsuarioService, RelatorioFinanceiro"
