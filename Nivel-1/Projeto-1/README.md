@@ -287,7 +287,42 @@ Exemplo de Estrutura:
     nextDouble() | double | Lê o próximo valor como um ponto flutuante de precisão dupla.
     nextBoolean() | boolean | Lê o próximo valor como um booleano (true ou false).
 
+# 🔁 Estruturas de Repetição (Loops) em Java  
+  Essas estruturas são cruciais para executar um bloco de código repetidamente, seja por um número conhecido de vezes ou enquanto uma condição for verdadeira.
 
+1 - 🔄 Loop for: Repetição com Contador Definido  
+  O loop for é ideal quando você sabe exatamente quantas vezes a repetição deve ocorrer. Ele compacta a inicialização, a condição de parada e o passo de iteração em uma única linha.
+
+  1.1 - Sintaxe Padrão do for  
+    A sintaxe é dividida em três partes principais separadas por ponto e vírgula:  
+      
+    Inicialização: Executada apenas uma vez no início (geralmente declara e inicializa a variável contadora).
+    Condição: Avaliada antes de cada iteração. Se for true, o corpo do loop é executado. Se for false, o loop é encerrado.
+    Atualização (Incremento/Decremento): Executada ao final de cada iteração.
+
+    Exemplo: 
+    // Contagem de 0 a 4
+    for (int i = 0; i < 5; i++) {
+      System.out.println("Iteração: " + i);
+    }
+
+2 - ⏳ Loop while: Repetição Baseada em Condição  
+  O loop while é usado quando o número de iterações é desconhecido e o loop deve continuar enquanto uma condição booleana permanecer verdadeira.
+  
+  2.1 - Sintaxe Padrão do while
+
+    Inicialização: A variável de controle deve ser inicializada antes do loop.
+    Condição: É avaliada antes de cada iteração.
+    Atualização: A variável de controle deve ser atualizada dentro do corpo do loop para evitar um loop infinito.
+  
+    Exemplo: 
+    // O loop continua enquanto 'contador' for menor que 5
+    int contador = 0; // 1. Inicialização
+    
+    while (contador < 5) { // 2. Condição
+      System.out.println("Contando: " + contador);
+      contador++; // 3. Atualização/Incremento
+    }
 
 # 💡 Conclusão: Princípios Chave
 Tipos de Dados: Use o tipo primitivo mais adequado para economizar memória (ex: int para contagens, double para valores monetários).
