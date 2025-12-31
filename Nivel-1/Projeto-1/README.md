@@ -241,6 +241,54 @@ A padronização do código é essencial para a leitura e manutenção do projet
     
     System.out.println("Status: " + status); // Saída: Status: Maior
 
+# 🖥️ Leitura de Dados de Entrada em Java
+
+1 - ⌨️ Leitura de Dados pelo Console (System.in)  
+  A maneira mais comum e flexível de ler dados digitados pelo usuário no console é usando a classe java.util.Scanner.
+
+1.1 - Usando a Classe Scanner  
+  Para usar o Scanner, você precisa:
+
+    Importar a classe: import java.util.Scanner;
+    Instanciar o objeto, passando System.in (o fluxo de entrada padrão) como argumento.
+    Fechar o objeto Scanner após o uso, para liberar recursos do sistema.
+
+Exemplo de Estrutura: 
+
+    import java.util.Scanner;
+    
+    public class LeituraDados {
+    public static void main(String[] args) {
+    // 1. Instanciação: Cria o objeto Scanner lendo do teclado (System.in)
+    Scanner scanner = new Scanner(System.in);
+    
+            System.out.println("Digite seu nome:");
+            // 2. Leitura de String
+            String nome = scanner.nextLine(); 
+    
+            System.out.println("Digite sua idade:");
+            // 3. Leitura de Inteiro
+            int idade = scanner.nextInt();
+    
+            System.out.println("Olá, " + nome + "! Você tem " + idade + " anos.");
+    
+            // 4. Fechamento: Libera os recursos do sistema
+            scanner.close(); 
+        }
+    }
+
+1.2 - Métodos Comuns de Leitura do Scanner  
+  O Scanner possui métodos específicos para ler diferentes tipos de dados.
+
+    Método | Tipo de Retorno | Descrição
+    nextLine() | String | "Lê toda a linha de entrada, incluindo espaços, até o caractere de nova linha (Enter)."
+    next() | tring | "Lê apenas o próximo token (palavra), delimitado por espaços em branco."
+    nextInt() | int | Lê o próximo valor como um inteiro.
+    nextDouble() | double | Lê o próximo valor como um ponto flutuante de precisão dupla.
+    nextBoolean() | boolean | Lê o próximo valor como um booleano (true ou false).
+
+
+
 # 💡 Conclusão: Princípios Chave
 Tipos de Dados: Use o tipo primitivo mais adequado para economizar memória (ex: int para contagens, double para valores monetários).
 
