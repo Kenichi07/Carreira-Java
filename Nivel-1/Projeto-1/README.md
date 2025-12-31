@@ -174,7 +174,8 @@ A padronização do código é essencial para a leitura e manutenção do projet
     int idade = 20;
     
     if (idade >= 18) {
-    System.out.println("Usuário é maior de idade.");
+      System.out.println("Usuário é maior de idade.");
+    }
 
 1.2 - Condicional Composta (if / else)  
   Permite definir um bloco de código alternativo que será executado se a condição do if for false.
@@ -182,9 +183,9 @@ A padronização do código é essencial para a leitura e manutenção do projet
     double saldo = 500.00;
     
     if (saldo >= 1000.00) {
-    System.out.println("Pode fazer o investimento.");
+      System.out.println("Pode fazer o investimento.");
     } else {
-    System.out.println("Saldo insuficiente para o investimento.");
+      System.out.println("Saldo insuficiente para o investimento.");
     }
 
 1.3 - Condicional Aninhada (if / else if / else)  
@@ -193,13 +194,13 @@ A padronização do código é essencial para a leitura e manutenção do projet
     int pontuacao = 85;
     
     if (pontuacao >= 90) {
-    System.out.println("Nota: A");
+      System.out.println("Nota: A");
     } else if (pontuacao >= 80) { // Se não for 90+, verifica se é 80+.
-    System.out.println("Nota: B");
+      System.out.println("Nota: B");
     } else if (pontuacao >= 70) {
-    System.out.println("Nota: C");
+      System.out.println("Nota: C");
     } else { // Executado se nenhuma das condições acima for verdadeira
-    System.out.println("Nota: D");
+      System.out.println("Nota: D");
     }
 
 2 - ⚡ Estrutura Condicional de Múltipla Escolha (switch)  
