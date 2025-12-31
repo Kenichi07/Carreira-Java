@@ -343,3 +343,6 @@ Casting: Use conversão implícita sempre que possível. Use conversão explíci
     Múltiplas Opções Fixas (Valores Exatos) | switch | Mais rápido e legível quando a variável é comparada com muitos valores constantes.
     Atribuição Simples de Valor | Operador Ternário (? :) | Conciso e ideal para atribuir um valor a uma variável com base em uma condição.
 
+for: Use quando você sabe de antemão o número de repetições (iteração sobre um array, contagem fixa).
+
+while: Use quando o número de repetições depende de uma condição que pode mudar dentro do loop (leitura de arquivo, entrada de usuário até que uma flag seja alterada).
