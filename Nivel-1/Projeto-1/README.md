@@ -163,6 +163,83 @@ A padronização do código é essencial para a leitura e manutenção do projet
     
     // meuInteiro agora vale 9
 
+# 🧠 Estruturas Condicionais em Java
+1 - 🚦 Estrutura Condicional Simples e Composta (if / else)  
+  Esta é a forma mais fundamental de controle de fluxo, permitindo que o programa tome decisões binárias.
+
+1.1 - Condicional Simples (if)  
+  Executa um bloco de código apenas se a expressão booleana (condição) for avaliada como true.
+
+    // Se a condição for verdadeira, a mensagem é impressa.
+    int idade = 20;
+    
+    if (idade >= 18) {
+    System.out.println("Usuário é maior de idade.");
+
+1.2 - Condicional Composta (if / else)  
+  Permite definir um bloco de código alternativo que será executado se a condição do if for false.
+
+    double saldo = 500.00;
+    
+    if (saldo >= 1000.00) {
+    System.out.println("Pode fazer o investimento.");
+    } else {
+    System.out.println("Saldo insuficiente para o investimento.");
+    }
+
+1.3 - Condicional Aninhada (if / else if / else)  
+  Usada para avaliar múltiplas condições em sequência. O primeiro bloco cuja condição for true é executado, e o restante é ignorado.
+
+    int pontuacao = 85;
+    
+    if (pontuacao >= 90) {
+    System.out.println("Nota: A");
+    } else if (pontuacao >= 80) { // Se não for 90+, verifica se é 80+.
+    System.out.println("Nota: B");
+    } else if (pontuacao >= 70) {
+    System.out.println("Nota: C");
+    } else { // Executado se nenhuma das condições acima for verdadeira
+    System.out.println("Nota: D");
+    }
+
+2 - ⚡ Estrutura Condicional de Múltipla Escolha (switch)  
+  O switch é usado quando você precisa comparar uma única variável com múltiplos valores possíveis. É geralmente mais limpo e legível do que uma longa série de if / else if.
+
+  1. Variáveis Suportadas: Primitivos (byte, short, char, int), Wrappers (Byte, Short, Character, Integer), Strings e Enums.
+  
+  2. A Palavra-Chave break: É crucial! Ela interrompe a execução do switch após um case ser encontrado. Sem o break, a execução "cai" para o próximo case (comportamento conhecido como fall-through).
+  
+  3. O default: O bloco default é opcional e é executado se nenhum dos valores de case corresponder ao valor da expressão.
+
+    int diaDaSemana = 3; // 1 = Domingo, 3 = Terça
+    
+    switch (diaDaSemana) {
+      case 1:
+        System.out.println("Domingo: Início da semana.");
+        break; // Interrompe aqui
+      case 2:
+      case 3: // Múltiplos cases podem compartilhar o mesmo bloco de código
+        System.out.println("Dia útil.");
+        break;
+      case 7:
+        System.out.println("Sábado: Fim de semana.");
+        break;
+      default:
+        System.out.println("Dia inválido.");
+    }
+
+3 - 🤔 Operador Ternário (Condicional de Expressão)  
+  O operador ternário (? :) é uma forma condensada de escrever uma instrução simples de if/else em uma única linha. Ele é um operador de expressão, o que significa que ele retorna um valor.
+
+  Sintaxe: condição ? valor_se_verdadeiro : valor_se_falso;
+
+    int idade = 22;
+    
+    // Se a idade for >= 18, a variável status recebe "Maior", senão recebe "Menor".
+    String status = (idade >= 18) ? "Maior" : "Menor";
+    
+    System.out.println("Status: " + status); // Saída: Status: Maior
+
 # 💡 Conclusão: Princípios Chave
 Tipos de Dados: Use o tipo primitivo mais adequado para economizar memória (ex: int para contagens, double para valores monetários).
 
@@ -176,4 +253,9 @@ Keywords: Não use palavras-chave como nomes de variáveis. Use a palavra-chave 
 
 Casting: Use conversão implícita sempre que possível. Use conversão explícita com cautela, pois pode resultar em perda de dados (truncamento) ou, em casos extremos, overflow.
 
+    Situação | Estrutura Recomendada | Razão
+    Decisão Binária (Sim ou Não) | if / else | Simples e direto ao ponto.
+    Múltiplas Condições (>=, <=) | if / else if | Permite verificar intervalos e diferentes expressões booleanas.
+    Múltiplas Opções Fixas (Valores Exatos) | switch | Mais rápido e legível quando a variável é comparada com muitos valores constantes.
+    Atribuição Simples de Valor | Operador Ternário (? :) | Conciso e ideal para atribuir um valor a uma variável com base em uma condição.
 
