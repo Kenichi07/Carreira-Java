@@ -113,6 +113,56 @@ A padronização do código é essencial para a leitura e manutenção do projet
       */
       for (Usuario user : lista) { ... }
 
+# 🛠️ Palavras-Chave de Declaração e Conversão em Java
+
+1 - 🔑 Palavras-Chave Reservadas para Declaração de Variáveis  
+  Palavras-chave são identificadores pré-definidos que possuem um significado específico para o compilador Java. Elas não podem ser usadas como nomes de variáveis, métodos ou classes.
+
+1.1 - Palavras-Chave de Tipos Primitivos (Tipos de Dados)  
+  Essas palavras-chave definem o tipo de dado que a variável armazenará e a quantidade de memória que ela ocupará.
+
+    Tipo | Descrição | Exemplo de Declaração
+    byte | Inteiro de 8 bits. | byte nivelAcesso = 5;
+    short | Inteiro de 16 bits. | short contador = 1000;
+    int | Inteiro de 32 bits (padrão). | int idade = 25;
+    long | Inteiro de 64 bits. | long populacaoMundial = 8000000000L;
+    float | Ponto flutuante de 32 bits. | float preco = 19.99f;
+    double | Ponto flutuante de 64 bits (padrão). | double pi = 3.14159;
+    boolean | Valor lógico (true ou false). | boolean ativo = true;
+    char | Caractere Unicode de 16 bits. | char letra = 'A';
+
+1.2 - Modificadores e Declarações Adicionais  
+  Estas palavras-chave modificam a forma como a variável é armazenada, acessada ou utilizada. 
+
+    Palavra-Chave | Uso na Variável | Descrição
+    final | final int IDADE_MINIMA = 18; | Declara uma constante. O valor deve ser atribuído uma vez e não pode ser alterado posteriormente.
+    static | static int contadorGeral; | Cria uma variável de classe (compartilhada por todas as instâncias).
+    transient | transient String senha; | Indica que o campo não deve ser serializado (ignorada durante o salvamento do objeto).
+    volatile | volatile boolean flag; | "Indica que a variável pode ser alterada por múltiplas threads simultaneamente, garantindo que o valor seja lido da memória principal."
+    var (Java 10+) | "var nome = "Alice"; | "Declara uma variável local onde o tipo é inferido pelo compilador (substitui String ou int, etc., em variáveis locais)."
+
+2 - 🔄 Conversão de Valores (Type Casting)  
+  A conversão de valores é o processo de mudar o tipo de dado de uma variável para outro. Em Java, isso pode ser implícito ou explícito.
+
+2.1 - Conversão Implícita (Widening Conversion)  
+  Ocorre automaticamente (promovida pelo compilador) quando se move de um tipo menor para um tipo maior, sem risco de perda de dados.
+
+    int meuInteiro = 100;
+    double meuDouble = meuInteiro; // Conversão Implícita (int -> double)
+    
+    // meuDouble agora vale 100.0
+
+2.2 - Conversão Explícita (Narrowing Conversion)  
+  Requer um cast manual (colocando o tipo desejado entre parênteses) pois há o risco de perda de dados ou precisão (ex: de double para int).
+
+    double meuDouble = 9.99;
+    
+    // Conversão Explícita (double -> int):
+    // O valor fracionário (.99) será truncado e perdido.
+    int meuInteiro = (int) meuDouble;
+    
+    // meuInteiro agora vale 9
+
 # 💡 Conclusão: Princípios Chave
 Tipos de Dados: Use o tipo primitivo mais adequado para economizar memória (ex: int para contagens, double para valores monetários).
 
@@ -122,6 +172,8 @@ Convenção: Siga rigorosamente as convenções de PascalCase (Classes) e camelC
 
 Comentários: Priorize a escrita de código claro, mas use Javadoc para documentar todas as interfaces públicas de métodos e classes, garantindo que a documentação técnica seja sempre gerada e atualizada.
 
+Keywords: Não use palavras-chave como nomes de variáveis. Use a palavra-chave final para definir constantes.
 
+Casting: Use conversão implícita sempre que possível. Use conversão explícita com cautela, pois pode resultar em perda de dados (truncamento) ou, em casos extremos, overflow.
 
 
